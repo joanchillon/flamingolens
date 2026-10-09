@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FlamingoLens: Amazon product check for sellers</title>
+<meta name="description" content="FlamingoLens is a Chrome extension that helps Amazon sellers check a product's key data and real profit in seconds.">
+<link rel="icon" href="icon.png">
+<style>
+  :root { --navy:#0f2a4a; --amber:#ff5c8a; --ink:#1d2433; --muted:#5c6780; --line:#e6eaf1; --bg:#f6f8fb; }
+  * { box-sizing: border-box; }
+  body { margin:0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; color:var(--ink); background:#fff; line-height:1.55; }
+  a { color: var(--navy); }
+  .wrap { max-width: 1040px; margin: 0 auto; padding: 0 20px; }
+  nav { display:flex; align-items:center; gap:10px; padding:18px 0; }
+  nav img { width:32px; height:32px; border-radius:8px; }
+  nav b { font-size:18px; }
+  nav .sp { flex:1; }
+  nav a { text-decoration:none; color:var(--muted); font-size:14px; margin-left:18px; }
+  .hero { display:grid; grid-template-columns: 1.2fr .8fr; gap:40px; align-items:center; padding:40px 0 60px; }
+  h1 { font-size:42px; line-height:1.12; margin:0 0 16px; letter-spacing:-.5px; }
+  .lead { font-size:19px; color:var(--muted); margin:0 0 26px; }
+  .badge { display:inline-block; background:#ffe3ec; color:#a8174a; font-weight:700; font-size:13px; padding:6px 12px; border-radius:999px; margin-bottom:18px; }
+  .btn { display:inline-block; background:var(--amber); color:var(--ink); font-weight:700; text-decoration:none; padding:12px 20px; border-radius:10px; }
+  .shot { border-radius:14px; box-shadow:0 18px 50px rgba(15,42,74,.22); max-width:100%; display:block; margin-left:auto; }
+  section { padding:56px 0; border-top:1px solid var(--line); }
+  h2 { font-size:28px; margin:0 0 22px; }
+  .grid { display:grid; grid-template-columns: repeat(3, 1fr); gap:18px; }
+  .card { background:var(--bg); border-radius:14px; padding:20px; }
+  .card h3 { margin:0 0 6px; font-size:17px; }
+  .card p { margin:0; color:var(--muted); font-size:15px; }
+  ul.check { padding-left:0; list-style:none; }
+  ul.check li { padding-left:28px; position:relative; margin:10px 0; }
+  ul.check li::before { content:"✓"; position:absolute; left:0; color:#148a4f; font-weight:800; }
+  footer { border-top:1px solid var(--line); padding:28px 0 40px; color:var(--muted); font-size:14px; display:flex; gap:20px; flex-wrap:wrap; }
+  @media (max-width: 800px) {
+    .hero { grid-template-columns:1fr; padding-top:20px; }
+    h1 { font-size:32px; }
+    .grid { grid-template-columns:1fr; }
+    .shot { margin: 0 auto; max-width: 340px; }
+    nav a { display: none; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <nav><img src="icon.png" alt=""><b>FlamingoLens</b><span class="sp"></span><a href="#features">Features</a><a href="#data">Data use</a><a href="privacy.html">Privacy</a><a href="#contact">Contact</a></nav>
+
+  <div class="hero">
+    <div>
+      <span class="badge">Free during beta</span>
+      <h1>Know if an Amazon product is worth selling, in seconds.</h1>
+      <p class="lead">FlamingoLens is a Chrome extension for Amazon sellers. Open any product page and see its key data and your real profit per unit, without leaving Amazon.</p>
+      <a class="btn" href="#contact">Join the beta</a>
+    </div>
+    <img class="shot" src="screenshot.png" alt="FlamingoLens panel showing listing data and a profit calculator on an Amazon product page" width="340">
+  </div>
+
+  <section id="features">
+    <h2>What it does</h2>
+    <div class="grid">
+      <div class="card"><h3>Listing at a glance</h3><p>Price, Best Sellers Rank, rating, number of sellers, fulfillment, weight and size, all in one quiet side panel.</p></div>
+      <div class="card"><h3>Real profit per unit</h3><p>Enter your product cost and shipping. FlamingoLens shows Amazon fees, profit, margin, ROI and the highest cost that still breaks even, with VAT handled for European stores.</p></div>
+      <div class="card"><h3>Saved list and export</h3><p>Save products as you research, compare them side by side and export everything to CSV for your spreadsheet.</p></div>
+    </div>
+    <ul class="check">
+      <li>Works on Amazon US, Canada, Mexico, UK, Germany, France, Spain, Italy, Netherlands, Sweden, Poland and Belgium.</li>
+      <li>Fast and lightweight. It doesn't slow Amazon down or cover product images.</li>
+      <li>No pop-ups, no ads, no review nags.</li>
+    </ul>
+  </section>
+
+  <section id="data">
+    <h2>How FlamingoLens uses data</h2>
+    <p>FlamingoLens reads the Amazon product page you are viewing to show its data. Your saved products and settings are stored in your own browser.</p>
+    <p>Sellers can optionally connect their Amazon seller account through Amazon's official Selling Partner API. FlamingoLens then uses Amazon's data only to show exact fee estimates, sales rank and offer information for the products you look at. FlamingoLens does not access buyer names, addresses or other customer information, and never sells or shares your data. Read the full <a href="privacy.html">privacy policy</a>.</p>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Questions, feedback or want to join the beta? Email <a href="mailto:YOUR-EMAIL@example.com">YOUR-EMAIL@example.com</a>.</p>
+  </section>
+
+  <footer><span>© 2026 FlamingoLens</span><a href="privacy.html">Privacy policy</a><span>FlamingoLens is an independent tool and is not affiliated with or endorsed by Amazon.</span></footer>
+</div>
+</body>
+</html>
